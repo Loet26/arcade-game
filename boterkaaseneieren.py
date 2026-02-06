@@ -2,12 +2,15 @@ import play
 bord = play.new_box(height= 200, width = 200, color="white", border_color="black", border_radius=10)
 vak1 = play.new_box(height = 50, width = 50, color="white", border_color="black", border_radius=10)
 tekst = play.new_text("boter, kaas en eieren", y=250)
-speler1 = "X"
-speler2 = "O"
+speler1 = play.new_circle(radius= 20)
+speler2 = play.new_text("X")
+speler1.hide()
+speler2.hide()
 
 @play.when_mouse_clicked
 def pictogram(): 
     print(speler1) 
+
 
 
 play.start_program()

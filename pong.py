@@ -5,7 +5,7 @@ batje_2 = play.new_box(color="black", x=-250, width= 20, height = 80)
 
 batje_1.start_physics(obeys_gravity=False, can_move=False)
 batje_2.start_physics(obeys_gravity=False, can_move=False)
-bal.start_physics(obeys_gravity=False, x_speed=200)
+bal.start_physics(obeys_gravity=False, x_speed=250)
 x_speed = 0
 y_speed = 0
 
