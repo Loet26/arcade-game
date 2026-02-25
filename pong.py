@@ -9,6 +9,8 @@ bal.start_physics(obeys_gravity=False, x_speed=200)
 x_speed = 200
 y_speed = 200
 
+play.new_sound("pongsound.mp3", volume=-1)
+
 #bewegingen 
 @play.when_key_pressed("up")
 def batje1_omhoog():
