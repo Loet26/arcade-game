@@ -1,4 +1,5 @@
 import play
+
 bal = play.new_circle(color='black', radius=18)
 batje_1 = play.new_box(color="black", x=250, width= 20, height = 80)
 batje_2 = play.new_box(color="black", x=-250, width= 20, height = 80)
@@ -8,8 +9,6 @@ batje_2.start_physics(obeys_gravity=False, can_move=False)
 bal.start_physics(obeys_gravity=False, x_speed=200)
 x_speed = 200
 y_speed = 200
-
-play.new_sound("pongsound.mp3", volume=-1)
 
 #bewegingen 
 @play.when_key_pressed("up")

@@ -22,10 +22,10 @@ pongRand = play.new_box(color="green", width=210, height=70, x=120, y=80)
 pongBox = play.new_box(color="black", width=200, height=60, x=120, y=80)
 pongTxt = play.new_text(words="PONG", x=120, y=80, font_size=35, color="green")
 
-boterRand = play.new_box(color="yellow", width=210, height=110, x=-120, y=-20)
-boterBox = play.new_box(color="black", width=200, height=100, x=-120, y=-20)
-boterTxt1 = play.new_text(words="BOTER KAAS", x=-120, y=-10, font_size=30, color="yellow")
-boterTxt2 = play.new_text(words="EN EIEREN", x=-120, y=-40, font_size=30, color="yellow")
+steenRand = play.new_box(color="yellow", width=210, height=110, x=-120, y=-20)
+steenBox = play.new_box(color="black", width=200, height=100, x=-120, y=-20)
+steenTxt1 = play.new_text(words="STEEN PAPIER", x=-120, y=-10, font_size=30, color="yellow")
+steenTxt2 = play.new_text(words="SCHAAR", x=-120, y=-40, font_size=30, color="yellow")
 
 galgjeRand = play.new_box(color="magenta", width=210, height=70, x=120, y=-20)
 galgjeBox = play.new_box(color="black", width=200, height=60, x=120, y=-20)
@@ -47,9 +47,9 @@ async def clickDing():
         os.system("python galgje.py")
         sys.exit()
 
-    if play.mouse.is_touching(boterBox):
+    if play.mouse.is_touching(steenBox):
         pygame.mixer.music.stop()
-        os.system("python boterkaasenerien.py")
+        os.system("python steenpapierschaar.py")
         sys.exit()
 
     if play.mouse.is_touching(pongBox):
@@ -77,14 +77,14 @@ async def hoverDing():
         galgjeBox.color = "black"
         galgjeTxt.color = "magenta"
 
-    if play.mouse.is_touching(boterBox):
-        boterBox.color = "yellow"
-        boterTxt1.color = "black"
-        boterTxt2.color = "black"
+    if play.mouse.is_touching(steenBox):
+        steenBox.color = "yellow"
+        steenTxt1.color = "black"
+        steenTxt2.color = "black"
     else:
-        boterBox.color = "black"
-        boterTxt1.color = "yellow"
-        boterTxt2.color = "yellow"
+        steenBox.color = "black"
+        steenTxt1.color = "yellow"
+        steenTxt2.color = "yellow"
 
     if play.mouse.is_touching(pongBox):
         pongBox.color = "green"
